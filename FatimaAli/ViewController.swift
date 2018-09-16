@@ -10,9 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textLabel: UILabel!
+    
+    @IBOutlet weak var textField: UITextField!
+    
+    var backgroundColor: UIColor!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        backgroundColor = view.backgroundColor
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,5 +29,36 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func didTapButton(_ sender: Any) {
+        print("Hello")
+        textLabel.textColor = UIColor.orange
+    }
+    
+    @IBAction func didTapViewButton(_ sender: Any) {
+        view.backgroundColor = UIColor.green
+    }
+    
+    @IBAction func didTapTextButton(_ sender: Any) {
+      //textLabel.text = "Goodbye!"
+        if(textField.text == "")
+        {
+            textLabel.text = "Hello from Fatima!"
+        }
+        else
+        {
+            textLabel.text = textField.text
+
+        }
+        textField.text = ""
+        view.endEditing(true)
+    }
+    
+    @IBAction func onResetGesture(_ sender: Any) {
+        textLabel.text = "Hello from Fatima!"
+        view.backgroundColor = backgroundColor
+        textLabel.textColor = backgroundColor
+        
+    }
+    
 }
 
