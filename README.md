@@ -1,7 +1,7 @@
 ## Hello-World-App
 
 ### App Description
-This app lets users enter custom text into a text label. Then, they may tap the buttons to change the text color to orange or change the background color to green. The user can reset the entire view by tapping the peach-colored background. 
+This app lets users enter custom text into a text label. Then, they may tap the buttons to change the text color to orange or change the background color to green. The user can reset the entire view by tapping the background. 
 
 ### App Walk-through
 <img src="https://i.imgur.com/RVEeorL.gif" width=300><br>
